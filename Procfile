@@ -1,0 +1,1 @@
+web: gunicorn wappclone.asgi --log-file -
