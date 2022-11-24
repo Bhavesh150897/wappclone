@@ -7,3 +7,6 @@ whitenoise
 gunicorn
 python-dotenv
 mysqlclient
+Pillow
+django_auto_logout
+django_session_timeout
