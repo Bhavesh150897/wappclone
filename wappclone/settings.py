@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'whitenoise.runserver_nostatic',
     # 'chat.User',
 
     'chat',
@@ -61,6 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django_auto_logout.middleware.auto_logout',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'wappclone.urls'
@@ -68,7 +70,7 @@ ROOT_URLCONF = 'wappclone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -186,7 +188,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
@@ -201,3 +204,7 @@ AUTO_LOGOUT = {
     'MESSAGE': 'The session has expired. Please login again to continue.',
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
+
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
