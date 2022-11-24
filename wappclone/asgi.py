@@ -16,6 +16,8 @@ django_asgi_app = get_asgi_application()
 # from chat import routing
 from chat.routing import *
 
+# export DJANGO_SETTINGS_MODULE=wappclone.settings
+# heroku config:set DJANGO_SETTINGS_MODULE=wappclone.settings --account personal
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wappclone.settings')
 
 application = ProtocolTypeRouter({
