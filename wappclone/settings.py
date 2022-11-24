@@ -87,6 +87,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'wappclone.wsgi.application'
 ASGI_APPLICATION = 'wappclone.asgi.application'
 
+# ASGI_APPLICATION = "routing.application"
+
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels.layers.InMemoryChannelLayer"
