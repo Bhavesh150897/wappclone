@@ -49,3 +49,4 @@ zope.interface==5.5.1
 python-dotenv
 agora_token_builder
 pusher
+gunicorn==20.1.0
