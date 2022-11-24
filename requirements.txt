@@ -11,3 +11,4 @@ Pillow
 django_auto_logout
 django_session_timeout
 agora_token_builder
+pusher
