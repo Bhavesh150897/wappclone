@@ -7,3 +7,4 @@ whitenoise
 gunicorn
 python-dotenv
 mysqlclient
+Pillow
