@@ -5,3 +5,4 @@ django-crispy-forms
 djangorestframework
 whitenoise
 gunicorn
+python-dotenv
