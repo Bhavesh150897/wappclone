@@ -12,4 +12,4 @@ python-dotenv
 agora_token_builder
 pusher
 gunicorn==20.1.0
-daphne
+daphne==3.0.2
