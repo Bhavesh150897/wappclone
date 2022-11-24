@@ -52,3 +52,4 @@ pusher
 gunicorn==20.1.0
 django_auto_logout
 django_session_timeout
+dj-database-url
