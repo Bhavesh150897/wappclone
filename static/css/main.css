@@ -1,0 +1,109 @@
+
+/* Header */
+'
+#start-text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#start-text h1 {
+    font-size: 35px;
+}
+#start-text p {
+    font-size: 17.5px;
+}
+
+/*.form-field {
+    margin: 1rem;
+    box-shadow: rgba(189, 115, 253, 0.246) 0px 3px 10px 0px;
+    background-color: rgba(189, 115, 253, 0.246);
+    border-radius: 10px;
+}*/
+
+@media screen and (max-width: 450px) {
+    #form-container {
+        width: 95%;
+    }
+    #start-text h1 {
+        font-size: 20px;
+    }
+}
+
+/*  */
+
+/* Room */
+#video-streams {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+.video-container {
+    border: 1px solid rgba(189, 115, 253, 0.611);
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgb(0, 0, 0);
+    flex-basis: 400px;
+    flex-grow: 1;
+    max-height: 100%;
+    min-height: 350px;
+    position: relative;
+}
+
+.video-player {
+    height: 100%;
+    width: 100%;
+}
+
+.video-player > * {
+    border-radius: 4px;
+}
+
+#room-name-wrapper {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.username-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-basis: 325px;
+        min-height: 200px;
+    }
+}
+
+/*  */
+
+/* Control buttons */
+
+.control-icon {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#control-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1rem;
+    position: fixed;
+    bottom: 20px;
+}
