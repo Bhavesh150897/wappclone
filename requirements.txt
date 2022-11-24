@@ -8,3 +8,4 @@ gunicorn
 python-dotenv
 mysqlclient
 Pillow
+django_auto_logout
