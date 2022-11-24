@@ -1,1 +1,1 @@
-web: gunicorn wappclone.wsgi --log-file -
+web: gunicorn wappclone.asgi --log-file -
