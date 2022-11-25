@@ -27,6 +27,7 @@ class UserSerializer(ModelSerializer):
     timestamp = DateTimeField()
     profile = ImageField(source='profile.avatar')
     online = CharField(source='useractivity.online',read_only=True)
+    last_online_time = CharField(source='useractivity.last_online_time',read_only=True)
 
     class Meta:
         model = User

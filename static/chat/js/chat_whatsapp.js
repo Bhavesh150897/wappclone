@@ -28,6 +28,8 @@ function drawUserList() {
         const msg = userList[i]['latest_message'];
         const username = capitalizeFirstLetter(userList[i]['username']);
         const profile_img = userList[i]['profile'];
+        const last_online_time = userList[i]['last_online_time'];
+        console.log(userList[i]);
          const online = userList[i]['online'];
          status = '';
          if (online == 1) {
@@ -36,7 +38,7 @@ function drawUserList() {
              status = 'offline';
          }
         const userItem = `
-            <li class="contact image-user ${currentRecipient === userList[i]['username'] ? " active" : ""}" onclick="onClickUserList(this, '${userList[i]['username']}', '${userList[i]['online']}')">
+            <li class="contact image-user ${currentRecipient === userList[i]['username'] ? " active" : ""}" onclick="onClickUserList(this, '${userList[i]['username']}', '${userList[i]['online']}', '${userList[i]['last_online_time']}')">
                     <div class="wrap">
                         <span class="contact-status ${status}"></span>
                         <img src="${profile_img}" height="40" alt=""/>
@@ -139,11 +141,13 @@ function drawMessage(message) {
     $(messageItem).appendTo('#messages');
 }
 
-function onClickUserList(elem,recipient,status) {
+function onClickUserList(elem,recipient,status,last_online_time) {
     if (status == 1) {
-         $('.online-status').text('Online');
+        $('.online-status').html('Online');
     }else{
-         $('.online-status').text('Offline');
+        var now = moment(new Date());
+        var mom = moment.duration(now.diff(last_online_time)).humanize()
+        $('.online-status').html('last seen <span class="time">'+mom+' ago'+'</span>');
     }
     $('.contact-profile').css('background','#FFF');
     $('#user-img').css('display','block');
