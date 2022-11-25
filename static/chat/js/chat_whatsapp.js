@@ -29,7 +29,6 @@ function drawUserList() {
         const username = capitalizeFirstLetter(userList[i]['username']);
         const profile_img = userList[i]['profile'];
         const last_online_time = userList[i]['last_online_time'];
-        console.log(userList[i]);
          const online = userList[i]['online'];
          status = '';
          if (online == 1) {
