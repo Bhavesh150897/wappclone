@@ -69,9 +69,9 @@ main {
         left: 19% !important;
     }
     #video-container{
-        width: 310px !important;
+        width: 345px !important;
         height: 500px !important;
-        max-width: 86vw !important;
+        max-width: 97vw !important;
         max-height: 55vh !important;
         margin: 68px 0px 0px 0px !important;
         border: 1px solid #099dfd !important;
@@ -81,5 +81,11 @@ main {
     }
     .action-btns button{
         margin: 0px !important;
+    }
+    .call-alert{
+        margin: 175px 0px 0px 14px !important;
+    }
+    #frame .content .contact-profile p{
+        float: none !important;
     }
 }
