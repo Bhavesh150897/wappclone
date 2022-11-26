@@ -50,3 +50,36 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 600px) {
+    #local-video{
+        width: 30% !important;
+        height: 30% !important;
+        position: absolute !important;
+        /* left: 0px; */
+        bottom: 47px !important;
+        border: 1px solid #fff !important;
+        border-radius: 6px !important;
+        z-index: 2 !important;
+        cursor: pointer !important;
+    }
+    .action-btns{
+        position: absolute !important;
+        bottom: -4px !important;
+        left: 10% !important;
+    }
+    #video-container{
+        width: 310px !important;
+        height: 500px !important;
+        max-width: 86vw !important;
+        max-height: 55vh !important;
+        margin: 68px 0px 0px 0px !important;
+        border: 1px solid #099dfd !important;
+        position: absolute !important;
+        box-shadow: 1px 1px 11px #9e9e9e !important;
+        background-color: #fff !important;
+    }
+    .action-btns button{
+        margin: 0px !important;
+    }
+}
