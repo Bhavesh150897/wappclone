@@ -1,5 +1,5 @@
-channels
-channels-redis
+#channels
+#channels-redis
 Django
 django-crispy-forms
 djangorestframework
@@ -11,5 +11,11 @@ dj-database-url
 python-dotenv
 agora_token_builder
 pusher
-gunicorn==20.1.0
-daphne==3.0.2
+#gunicorn==20.1.0
+#daphne==3.0.2
+
+channels==3.0.3
+supervisor==4.2.2
+channels-redis==3.2.0
+gunicorn==20.0.4
+daphne==3.0.1
