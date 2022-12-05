@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework'
 ]
-INTERNAL_IPS = ['*','35.78.112.131']
+INTERNAL_IPS = ['*','35.78.112.131','ec2-35-78-112-131.ap-northeast-1.compute.amazonaws.com']
 
 # Application definition
 
@@ -211,5 +211,6 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://wappdjango.herokuapp.com'
+    'https://wappdjango.herokuapp.com',
+    'ec2-35-78-112-131.ap-northeast-1.compute.amazonaws.com',
 ]
