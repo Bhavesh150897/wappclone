@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework'
 ]
-INTERNAL_IPS = ['43.205.255.73']
+INTERNAL_IPS = ['*']
 
 # Application definition
 
