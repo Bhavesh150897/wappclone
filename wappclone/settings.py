@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-=bczx0s7411$k8bw+m+gm0n7&8#_!=hq%i*9h+_t+h4u@gxls1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.78.112.131']
+ALLOWED_HOSTS = ['*','35.78.112.131']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework'
 ]
-INTERNAL_IPS = ['35.78.112.131']
+INTERNAL_IPS = ['*','35.78.112.131']
 
 # Application definition
 
