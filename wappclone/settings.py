@@ -91,10 +91,7 @@ ASGI_APPLICATION = 'wappclone.asgi.application'
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-        "CONFIG": {
-            "hosts": [("localhost", 6379)],
-        },
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
     }
 }
 # CHANNEL_LAYERS = {
