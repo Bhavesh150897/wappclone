@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework'
 ]
-INTERNAL_IPS = ['*','wappdjango.herokuapp.com']
+INTERNAL_IPS = ['*']
 
 # Application definition
 
