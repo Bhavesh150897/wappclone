@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-=bczx0s7411$k8bw+m+gm0n7&8#_!=hq%i*9h+_t+h4u@gxls1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','wappdjango.herokuapp.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -91,8 +91,11 @@ ASGI_APPLICATION = 'wappclone.asgi.application'
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer"
-    }
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        }
+    },
 }
 # CHANNEL_LAYERS = {
 #     'default': {
@@ -189,7 +192,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
